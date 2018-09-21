@@ -116,14 +116,14 @@
 <meta property="og:site_name" content="My Blogs">
 <meta property="og:description" content="这是安装配置你的私有云的实验报告,主要是为了初步了解虚拟化技术和记录搭建私有云中遇到的问题. 下载安装 下载VMware.VMplayer是不带克隆虚拟机的功能的,要注意不要下载错了  下载Centos镜像,仅需要 Minimal ISO   配置VMware 配置VMware虚拟的网络,因为VMware很贴心的创建了2个虚拟网卡(NAT和Host-Only),所以我们按需要做些许更改即可.  通">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://dmaxzj.github.io/blogs/ServiceComputing/InstallCloud/InstallCLoud/img1.png">
-<meta property="og:image" content="https://dmaxzj.github.io/blogs/ServiceComputing/InstallCloud/InstallCloud/img2.png">
-<meta property="og:image" content="https://dmaxzj.github.io/blogs/ServiceComputing/InstallCloud/InstallCloud/img3.png">
-<meta property="og:updated_time" content="2018-09-21T04:57:41.265Z">
+<meta property="og:image" content="https://dmaxzj.github.io/blogs/ServiceComputing/InstallCloud/img1.png">
+<meta property="og:image" content="https://dmaxzj.github.io/blogs/ServiceComputing/InstallCloud/img2.png">
+<meta property="og:image" content="https://dmaxzj.github.io/blogs/ServiceComputing/InstallCloud/img3.png">
+<meta property="og:updated_time" content="2018-09-21T05:03:47.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用VMware安装配置私有云">
 <meta name="twitter:description" content="这是安装配置你的私有云的实验报告,主要是为了初步了解虚拟化技术和记录搭建私有云中遇到的问题. 下载安装 下载VMware.VMplayer是不带克隆虚拟机的功能的,要注意不要下载错了  下载Centos镜像,仅需要 Minimal ISO   配置VMware 配置VMware虚拟的网络,因为VMware很贴心的创建了2个虚拟网卡(NAT和Host-Only),所以我们按需要做些许更改即可.  通">
-<meta name="twitter:image" content="https://dmaxzj.github.io/blogs/ServiceComputing/InstallCloud/InstallCLoud/img1.png">
+<meta name="twitter:image" content="https://dmaxzj.github.io/blogs/ServiceComputing/InstallCloud/img1.png">
 
 
 
@@ -360,7 +360,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-21 12:57:41" itemprop="dateModified" datetime="2018-09-21T12:57:41+08:00">2018-09-21</time>
+                <time title="修改时间：2018-09-21 13:03:47" itemprop="dateModified" datetime="2018-09-21T13:03:47+08:00">2018-09-21</time>
               
             
           </span>
@@ -422,11 +422,11 @@
 <li><p>配置VMware虚拟的网络,因为VMware很贴心的创建了2个虚拟网卡(NAT和Host-Only),所以我们按需要做些许更改即可.</p>
 <ul>
 <li><p>通过windows命令行窗口输入<code>ipconfig</code>即可查看这两个虚拟网卡的ip地址.</p>
-<p><img src="InstallCLoud/img1.png" alt="查看虚拟网卡"></p>
+<p><img src="./img1.png" alt="查看虚拟网卡"></p>
 <p>VMnet1是Host-Only的网卡, VMnet8是NAT的网卡.</p>
 </li>
 <li><p>如果需要虚拟网络配置: VMware菜单 -&gt; 编辑 -&gt; 虚拟网络编辑器</p>
-<p><img src="InstallCloud/img2.png" alt="更改虚拟网卡"></p>
+<p><img src="./img2.png" alt="更改虚拟网卡"></p>
 <p>更改子网IP为你需要的即可.</p>
 </li>
 </ul>
@@ -513,7 +513,7 @@
 <li>虚拟机中输入<code>netstat -antup | grep xrdp</code>查看Xrdp监听的端口号, 默认为3389.</li>
 </ul>
 </li>
-<li>连接后输入用户名密码即可完成连接, 初次登陆需要加载较长时间和进行初始化设置.<br><img src="InstallCloud/img3.png" alt="远程桌面"></li>
+<li>连接后输入用户名密码即可完成连接, 初次登陆需要加载较长时间和进行初始化设置.<br><img src="./img3.png" alt="远程桌面"></li>
 </ul>
 </li>
 </ul>

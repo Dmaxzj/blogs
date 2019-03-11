@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/blogs/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/blogs/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blogs/images/apple-touch-icon-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blogs/images/favicon-32x32-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blogs/images/favicon-16x16-next.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/blogs/images/logo.svg?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blogs/',
+    scheme: 'Muse',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="课程网站1、简答题  软件工程的定义  IEEE: 软件工程是(1)将系统化的, 规范的, 可度量的方法应用于软件的开发, 运行和维护, 即将工程化方法应用与软件: (2) 在(1)中所述方法的研究.   Software engineering is “(1) the application of a systematic, disciplined, quantifiable approach">
+<meta name="keywords" content="homework">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件工程">
+<meta property="og:url" content="https://dmaxzj.github.io/blogs/swsad/software-engineering/index.html">
+<meta property="og:site_name" content="My Blogs">
+<meta property="og:description" content="课程网站1、简答题  软件工程的定义  IEEE: 软件工程是(1)将系统化的, 规范的, 可度量的方法应用于软件的开发, 运行和维护, 即将工程化方法应用与软件: (2) 在(1)中所述方法的研究.   Software engineering is “(1) the application of a systematic, disciplined, quantifiable approach">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-11T11:07:05.897Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="软件工程">
+<meta name="twitter:description" content="课程网站1、简答题  软件工程的定义  IEEE: 软件工程是(1)将系统化的, 规范的, 可度量的方法应用于软件的开发, 运行和维护, 即将工程化方法应用与软件: (2) 在(1)中所述方法的研究.   Software engineering is “(1) the application of a systematic, disciplined, quantifiable approach">
+
+
+
+
+
+
+  <link rel="canonical" href="https://dmaxzj.github.io/blogs/swsad/software-engineering/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>软件工程 | My Blogs</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blogs/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">My Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/blogs/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/blogs/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/blogs/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/blogs/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dmaxzj.github.io/blogs/blogs/swsad/software-engineering/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jay">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blogs/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">软件工程
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-11 18:59:32 / 修改时间：19:07:05" itemprop="dateCreated datePublished" datetime="2019-03-11T18:59:32+08:00">2019-03-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blogs/categories/swsad/" itemprop="url" rel="index"><span itemprop="name">swsad</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://sysu-swsad.github.io/swad-guide/01-nature-software#2%E4%BD%9C%E4%B8%9A" target="_blank" rel="noopener">课程网站</a><br>1、简答题</p>
+<ul>
+<li><p>软件工程的定义</p>
+<ul>
+<li><p>IEEE: 软件工程是(1)将系统化的, 规范的, 可度量的方法应用于软件的开发, 运行和维护, 即将工程化方法应用与软件: (2) 在(1)中所述方法的研究.</p>
+</li>
+<li><blockquote>
+<p><strong>Software engineering</strong> is “(1) the application of a <em>systematic, disciplined, quantifiable</em> approach to the <em>development, operation, and maintenance</em> of software, that is, the application of engineering to software,” and “(2) the study of approaches as in (1).” –– IEEE Standard 610.12</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>解释导致 software crisis 本质原因、表现，述说克服软件危机的方法</p>
+<ul>
+<li><p>本质原因: 快速增长的计算力和复杂的问题不能被解决, 随着软件变得复杂, 因为现有方法不起作用, 许多软件问题就出现了.</p>
+<ul>
+<li><blockquote>
+<p>The major cause of the software crisis is that the machines have become several orders of magnitude more powerful! To put it quite bluntly: as long as there were no machines, programming was no problem at all; when we had a few weak computers, programming became a mild problem, and now we have gigantic computers, programming has become an equally gigantic problem.</p>
+<p>— <a href="https://en.wikipedia.org/wiki/Edsger_Dijkstra" target="_blank" rel="noopener">Edsger Dijkstra</a>, <a href="https://en.wikipedia.org/wiki/Edsger_Dijkstra#Writings_by_E.W._Dijkstra" target="_blank" rel="noopener">The Humble Programmer (EWD340)</a>, <a href="https://en.wikipedia.org/wiki/Communications_of_the_ACM" target="_blank" rel="noopener">Communications of the ACM</a></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>表现:</p>
+<ul>
+<li>Projects running over-budget</li>
+<li>Projects running over-time</li>
+<li>Software was very inefficient</li>
+<li>Software was of low quality</li>
+<li>Software often did not meet requirements</li>
+<li>Projects were unmanageable and code difficult to maintain</li>
+<li>Software was never delivered</li>
+</ul>
+</li>
+<li><p>克服软件危机的方法</p>
+<ul>
+<li>为了克服软件危机，IEEE Computer Society 构建软件生产的最佳实践与相关知识的框架，称为 <a href="https://www.computer.org/web/swebok/index" target="_blank" rel="noopener">Software Engineering Body of Knowledge</a>。指导软件工程人才的培养与学科建设。</li>
+<li><a href="https://www.sebokwiki.org/wiki/An_Overview_of_the_SWEBOK_Guide" target="_blank" rel="noopener">2014 V3 版的 SWEBoK</a> 将知识分为软件工程实践和基础教育两个部分，共 15 个知识域（knowledge areas / KAs）。Software Requirements，Software Design 是其中最重要的两个领域。</li>
+<li>从实践的角度，Software Engineering Process 从时间维度给出了项目的过程模型（Process Models），其它则从内容角度给出了原则与方法。这样，就得到沿时间轴的二维表，这样软件工程就变成了在什么时刻、工作目标、应该做什么、怎么做的 <strong>最佳实践指南</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>软件生命周期</p>
+<ul>
+<li>在时间维度, 对软件项目任务进行划分, 又成为软件开发过程. 常见的有瀑布模型, 螺旋模型, 敏捷模型等.</li>
+</ul>
+</li>
+<li><p>SWEBoK 的 15 个知识域（<a href="https://www.sebokwiki.org/wiki/An_Overview_of_the_SWEBOK_Guide" target="_blank" rel="noopener">An Overview of the SWEBOK Guide</a> 请中文翻译其名称与简短说明）</p>
+<ul>
+<li><h3 id="Software-Requirements-软件需求"><a href="#Software-Requirements-软件需求" class="headerlink" title="Software Requirements(软件需求)"></a>Software Requirements(软件需求)</h3><p>软件需求KA关注软件需求的启发, 协商, 分析, 规范和验证.</p>
+</li>
+<li><h3 id="Software-Design-软件设计"><a href="#Software-Design-软件设计" class="headerlink" title="Software Design(软件设计)"></a>Software Design(软件设计)</h3><p>定义系统的架构, 组成, 接口和其他特征以及组件和那个结果的过程</p>
+</li>
+<li><h3 id="Software-Construction-软件构建"><a href="#Software-Construction-软件构建" class="headerlink" title="Software Construction(软件构建)"></a>Software Construction(软件构建)</h3><p>软件构建是指通过结合详细设计, 编码, 单元测试, 集成测试, 调试和验证来详细创建工作软件.</p>
+</li>
+<li><h3 id="Software-Testing-软件测试"><a href="#Software-Testing-软件测试" class="headerlink" title="Software Testing(软件测试)"></a>Software Testing(软件测试)</h3><p>软件测试是评估产品质量和通过识别错误来提高产品质量的活动.</p>
+</li>
+<li><h3 id="Software-Maintenance-软件维护"><a href="#Software-Maintenance-软件维护" class="headerlink" title="Software Maintenance(软件维护)"></a>Software Maintenance(软件维护)</h3><p>软件维护包括提高现有功能, 调整软件以在新的和被修改过的操作环境中运行以及修复缺陷.</p>
+</li>
+<li><h3 id="Software-Configuration-Management-软件配置管理"><a href="#Software-Configuration-Management-软件配置管理" class="headerlink" title="Software Configuration Management(软件配置管理)"></a>Software Configuration Management(软件配置管理)</h3><p>系统的配置是硬件, 固件或软件或这些组合的功能和物理特征.</p>
+</li>
+<li><h3 id="Software-Engineering-Management-软件工程管理"><a href="#Software-Engineering-Management-软件工程管理" class="headerlink" title="Software Engineering Management(软件工程管理)"></a>Software Engineering Management(软件工程管理)</h3><p>软件工程管理涉及计划, 协调, 测量, 报告和控制工程或程序, 以确保软件的开发和维护是系统化的, 规范化的和可量化的.</p>
+</li>
+<li><h3 id="Software-Engineering-Process-软件工程过程"><a href="#Software-Engineering-Process-软件工程过程" class="headerlink" title="Software Engineering Process(软件工程过程)"></a>Software Engineering Process(软件工程过程)</h3><p>软件工程KA关注软件生命周期过程的定义, 实现, 评估, 测量, 管理和改进.</p>
+</li>
+<li><h3 id="Software-Engineering-Models-and-Methods-软件工程模型和方法"><a href="#Software-Engineering-Models-and-Methods-软件工程模型和方法" class="headerlink" title="Software Engineering Models and Methods(软件工程模型和方法)"></a>Software Engineering Models and Methods(软件工程模型和方法)</h3><p>软件工程模型和方法KA解决了覆盖多个生命周期阶段; 其他KAs覆盖了特定的生命周期阶段的特定方法.</p>
+</li>
+<li><h3 id="Software-Quality-软件质量"><a href="#Software-Quality-软件质量" class="headerlink" title="Software Quality(软件质量)"></a>Software Quality(软件质量)</h3><p>软件质量是许多SWEBOK V3 KAs中普遍存在的软件生命周期问题</p>
+</li>
+<li><h3 id="Software-Engineering-Professional-Practice-软件工程专业实践"><a href="#Software-Engineering-Professional-Practice-软件工程专业实践" class="headerlink" title="Software Engineering Professional Practice(软件工程专业实践)"></a>Software Engineering Professional Practice(软件工程专业实践)</h3><p>软件工程专业实践关注软件工程师必须具备的专业, 负责和道德方面知识, 技能和态度.</p>
+<h2 id="Knowledge-Areas-Characterizing-the-Educational-Requirements-of-Software-Engineering"><a href="#Knowledge-Areas-Characterizing-the-Educational-Requirements-of-Software-Engineering" class="headerlink" title="Knowledge Areas Characterizing the Educational Requirements of Software Engineering"></a>Knowledge Areas Characterizing the Educational Requirements of Software Engineering</h2></li>
+<li><h3 id="Software-Engineering-Economics-软件工程经济学"><a href="#Software-Engineering-Economics-软件工程经济学" class="headerlink" title="Software Engineering Economics(软件工程经济学)"></a>Software Engineering Economics(软件工程经济学)</h3><p>软件工程经济学KA关注的是在业务环境做出决策, 以使技术决策与组织的业务目标保持一致.</p>
+</li>
+<li><h3 id="Computing-Foundations-计算基础"><a href="#Computing-Foundations-计算基础" class="headerlink" title="Computing Foundations(计算基础)"></a>Computing Foundations(计算基础)</h3><p>计算基础KA涵盖了提供软件工程实践所需的计算背景的基础主题.</p>
+</li>
+<li><h3 id="Mathematical-Foundations-数学基础"><a href="#Mathematical-Foundations-数学基础" class="headerlink" title="Mathematical Foundations(数学基础)"></a>Mathematical Foundations(数学基础)</h3><p>数学基础KA涵盖了提供软件工程实践所需的数学背景的基础主题.</p>
+</li>
+<li><h3 id="Engineering-Foundations-工程基础"><a href="#Engineering-Foundations-工程基础" class="headerlink" title="Engineering Foundations(工程基础)"></a>Engineering Foundations(工程基础)</h3><p>工程基础KA涵盖了提供软件工程实践所需的工程背景的基础主题.</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>简单解释 CMMI 的五个级别。例如：Level 1 - Initial：无序，自发生产模式。</p>
+<ul>
+<li>Level 1 - initial: 无序, 自发生产模式.</li>
+<li>Level 2 - managed: 工程特征显现, 经常是被动管理</li>
+<li>Level 3 - defined: 组织特征显现, 是积极主动的</li>
+<li>Level 4 - quantitatively managed: 评估和控制</li>
+<li>Level 5 - optimizing: 集中于过程的改进</li>
+</ul>
+</li>
+<li><p>用自己语言简述 SWEBok 或 CMMI （约200字）</p>
+<p>SWEBok 定义了软件工程实践和基础教育, 详细描述了软件生产的流程, 特别是在软件工程过程化中, 从时间维度给出了项目的过程模型, 使得软件的开发进度变得更加具体化和可管理. 其他条目则分别描述了剩余内容的原则, 规范, 方法和模型. 这样将开发工作软件拆分成一个一个有序的, 规范的, 具体的, 便于管理的小过程. 让软件工程变成了在什么时刻, 工作目标, 应该做什么和怎么做的最佳实践指南.</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blogs/tags/homework/" rel="tag"># homework</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blogs/ServiceComputing/InstallGo/" rel="next" title="GO开发环境搭建">
+                <i class="fa fa-chevron-left"></i> GO开发环境搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jay</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blogs/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blogs/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blogs/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Requirements-软件需求"><span class="nav-number">1.</span> <span class="nav-text">Software Requirements(软件需求)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Design-软件设计"><span class="nav-number">2.</span> <span class="nav-text">Software Design(软件设计)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Construction-软件构建"><span class="nav-number">3.</span> <span class="nav-text">Software Construction(软件构建)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Testing-软件测试"><span class="nav-number">4.</span> <span class="nav-text">Software Testing(软件测试)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Maintenance-软件维护"><span class="nav-number">5.</span> <span class="nav-text">Software Maintenance(软件维护)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Configuration-Management-软件配置管理"><span class="nav-number">6.</span> <span class="nav-text">Software Configuration Management(软件配置管理)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Engineering-Management-软件工程管理"><span class="nav-number">7.</span> <span class="nav-text">Software Engineering Management(软件工程管理)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Engineering-Process-软件工程过程"><span class="nav-number">8.</span> <span class="nav-text">Software Engineering Process(软件工程过程)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Engineering-Models-and-Methods-软件工程模型和方法"><span class="nav-number">9.</span> <span class="nav-text">Software Engineering Models and Methods(软件工程模型和方法)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Quality-软件质量"><span class="nav-number">10.</span> <span class="nav-text">Software Quality(软件质量)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Engineering-Professional-Practice-软件工程专业实践"><span class="nav-number">11.</span> <span class="nav-text">Software Engineering Professional Practice(软件工程专业实践)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knowledge-Areas-Characterizing-the-Educational-Requirements-of-Software-Engineering"><span class="nav-number"></span> <span class="nav-text">Knowledge Areas Characterizing the Educational Requirements of Software Engineering</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Engineering-Economics-软件工程经济学"><span class="nav-number">1.</span> <span class="nav-text">Software Engineering Economics(软件工程经济学)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Computing-Foundations-计算基础"><span class="nav-number">2.</span> <span class="nav-text">Computing Foundations(计算基础)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mathematical-Foundations-数学基础"><span class="nav-number">3.</span> <span class="nav-text">Mathematical Foundations(数学基础)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Engineering-Foundations-工程基础"><span class="nav-number">4.</span> <span class="nav-text">Engineering Foundations(工程基础)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jay</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blogs/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blogs/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blogs/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blogs/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/blogs/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blogs/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/blogs/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blogs/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

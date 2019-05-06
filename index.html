@@ -293,6 +293,194 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dmaxzj.github.io/blogs/blogs/swsad/hw9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jay">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blogs/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blogs/swsad/hw9/" itemprop="url">
+                  作业9
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-06 13:12:29 / 修改时间：13:12:21" itemprop="dateCreated datePublished" datetime="2019-05-06T13:12:29+08:00">2019-05-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blogs/categories/swsad/" itemprop="url" rel="index"><span itemprop="name">swsad</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="使用-UMLet-建模"><a href="#使用-UMLet-建模" class="headerlink" title="使用 UMLet 建模"></a>使用 <strong>UMLet</strong> 建模</h1><ul>
+<li><p>1、使用类图，分别对 Asg_RH 文档中 Make Reservation 用例以及 Payment 用例开展领域建模。然后，根据上述模型，给出建议的数据表以及主要字段，特别是主键和外键</p>
+<ul>
+<li><p>注意事项：</p>
+<ul>
+<li>对象必须是名词、特别是技术名词、报表、描述类的处理；</li>
+<li>关联必须有多重性、部分有名称与导航方向</li>
+<li>属性要注意计算字段</li>
+</ul>
+<p><img src="./0.png" alt="0"></p>
+<p><img src="./1.png" alt="1"></p>
+</li>
+<li><p>数据建模，为了简化描述仅需要给出表清单，例如：</p>
+<ul>
+<li>Hotel（ID/Key，Name，LoctionID/Fkey，Address…..）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Customer(ID/key, FullName, EmailAdress)</span><br><span class="line">City(ID/key, Name)</span><br><span class="line">Hotel(ID/key, Name, Adress, CityID/Fkey)</span><br><span class="line">Room(RoomID/key, HotelID/Fkey, DesciptorID/Fkey Availability)</span><br><span class="line">RoomDescirptor(ID/Key, type, price)</span><br><span class="line">Reservation(ID/key, RoomID/Fkey, BasketID/Fkey, checkInDate, checkOutDate, NumberOfAdults, NumberOfChildren, Requirement)</span><br><span class="line">Basket(ID/key, CustomerID/Key)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Payment(ID/key, ReservationID/Fkey, CardID/Fkey)</span><br><span class="line">Reservation(ID/key, RoomID/Fkey, BasketID/Fkey, checkInDate, checkOutDate, NumberOfAdults, NumberOfChildren, Requirement)</span><br><span class="line">CreditCard(ID/key, Type, CardSecurityCode, CardNumber CustomerID/Fkey)</span><br><span class="line">Customer(ID/key, FullName, EmailAdress)</span><br><span class="line">PaymentDetials(ID/key, CustomerId/Fkey, PaymentId/Fkey, Firstname, Lastname, Address1, Address2, City, CountyOrState, Country, Postcode, Telephone)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>2、使用 UML State Model，对每个订单对象生命周期建模</p>
+<ul>
+<li>建模对象： 参考 Asg_RH 文档， 对 Reservation/Order 对象建模。</li>
+<li>建模要求： 参考练习不能提供足够信息帮助你对订单对象建模，请参考现在定旅馆的旅游网站，尽可能分析围绕订单发生的各种情况，直到订单通过销售事件（柜台销售）结束订单。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./2.png" alt="2"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://dmaxzj.github.io/blogs/blogs/swsad/hw7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2214,7 +2402,7 @@
                 
                   <a href="/blogs/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
